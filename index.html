@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Monitor de frecuencia cardíaca con Arduino — UEM San Francisco de Quito</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ PORTADA ============ -->
+<section class="portada" id="portada">
+  <div class="container">
+    <div class="portada-card">
+
+      <div class="pulse-line" aria-hidden="true">
+        <svg viewBox="0 0 420 46" xmlns="http://www.w3.org/2000/svg">
+          <path class="pulse-path" d="M0 23 H140 L155 6 L172 40 L188 12 L200 30 L212 23 H420" />
+        </svg>
+      </div>
+
+      <p class="portada-institucion">Unidad Educativa Municipal Técnica y en Ciencias</p>
+      <h1 class="portada-nombre">“SAN FRANCISCO DE QUITO”</h1>
+      <img class="portada-sello" src="img/Portada/images.jpg" alt="Sello de la Unidad Educativa Municipal San Francisco de Quito">
+
+      <p class="portada-titulo-proyecto">PROYECTO DE BACHILLERATO TÉCNICO</p>
+
+      <p class="portada-tema-label">TEMA</p>
+      <p class="portada-tema">Sitio Web Implementando un Monitor de Frecuencia Cardiaca con la Placa Arduino</p>
+
+      <p class="portada-autores-label">Autores</p>
+      <ul class="portada-autores">
+        <li>Anthony Rojas</li>
+        <li>Tatiana Nicolalde</li>
+        <li>Carla Puma</li>
+      </ul>
+
+      <p class="portada-lugar">Quito – Ecuador · 2026</p>
+
+      <button class="btn btn-primary btn-block" id="btn-bienvenido">Bienvenido, presiona aquí</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENÚ PRINCIPAL ============ -->
+<section class="menu-section is-hidden" id="menu">
+  <div class="menu-inner">
+    <div class="menu-head">
+      <p class="eyebrow-label">Menú principal</p>
+      <h1>Explora el proyecto</h1>
+      <p style="margin:0 auto;">Selecciona una sección para conocer el desarrollo del monitor de frecuencia cardíaca.</p>
+    </div>
+
+    <div class="menu-grid">
+      <a class="menu-card" href="circuito.html">
+        <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M10 6.5H14M6.5 10V14M17.5 10V14M10 17.5H14"/></svg></span>
+        <h3>Circuito</h3>
+        <p>Funcionamiento y conexiones del circuito con Arduino, la pantalla LCD y el potenciómetro.</p>
+      </a>
+
+      <a class="menu-card" href="componentes.html">
+        <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3v4M17 3v4M4 9h16M6 9v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/></svg></span>
+        <h3>Componentes</h3>
+        <p>Ficha técnica de cada elemento electrónico utilizado en el proyecto.</p>
+      </a>
+
+      <a class="menu-card" href="desarrollo.html">
+        <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h10M4 18h6"/><circle cx="20" cy="18" r="1.6"/></svg></span>
+        <h3>Desarrollo</h3>
+        <p>Los cinco pasos seguidos, desde los componentes hasta la publicación del sitio.</p>
+      </a>
+
+      <a class="menu-card" href="conclusiones.html">
+        <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Conclusiones e importancia</h3>
+        <p>Aprendizajes obtenidos, importancia del proyecto y su valor innovador.</p>
+      </a>
+    </div>
+
+    <div class="menu-actions">
+      <button class="btn btn-outline" id="btn-volver-portada">Volver a la portada</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Circuito — Monitor de frecuencia cardíaca con Arduino</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"><path d="M0 9h8l2-7 3 14 2-11 2 4h9" fill="none" stroke="#ff5d5d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>UEM San Francisco de Quito</span>
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="circuito.html">Circuito</a>
+      <a href="componentes.html">Componentes</a>
+      <a href="desarrollo.html">Desarrollo</a>
+      <a href="conclusiones.html">Conclusiones e importancia</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="index.html#menu">Menú principal</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="section-hero">
+  <div class="hero-ecg-wrap" aria-hidden="true"><svg viewBox="0 0 1600 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 H260 L280 15 L300 85 L320 30 L340 70 L360 50 H800" fill="none" stroke="#ff5d5d" stroke-width="3"/><path d="M0 50 H260 L280 15 L300 85 L320 30 L340 70 L360 50 H800" fill="none" stroke="#ff5d5d" stroke-width="3" transform="translate(800,0)"/></svg></div>
+  <div class="container">
+    <p class="eyebrow-label">Sección 1</p>
+    <h1>Circuito</h1>
+    <p>El circuito conecta la placa Arduino con una pantalla LCD 16x2, utilizando un potenciómetro y una resistencia para controlar la visualización de la información en pantalla.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Funcionamiento general</h2>
+    <p>El Arduino actúa como unidad de control del circuito: envía datos y comandos a la pantalla LCD a través de sus pines digitales, indicándole qué texto mostrar y en qué posición hacerlo.</p>
+    <p>El potenciómetro se utiliza para ajustar el contraste de la pantalla, mientras que la resistencia limita la corriente que llega a la LCD, protegiendo el circuito. Todo el montaje se realiza sobre una protoboard, alimentada desde el propio Arduino.</p>
+
+    <div class="circuito-embed">
+      <div class="embed-frame">
+        <iframe src="https://www.tinkercad.com/embed/7aYtEujvvFU?sharecode=viYZ-aGnETZepi8t3bo9Mt4cG4q8WnVio-UwCcO6Vo4" title="Simulación del circuito en Tinkercad" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <p class="embed-caption">Simulación interactiva del circuito, realizada en Tinkercad.</p>
+    </div>
+
+    <hr class="divider-line" />
+
+    <h2>Conexiones entre los componentes</h2>
+    <p>El circuito se arma siguiendo un orden lógico de conexión entre el Arduino, la pantalla LCD y los elementos de ajuste:</p>
+    <ol class="pasos-conexion">
+      <li>Los pines de datos de la pantalla LCD (RS, E y D4 a D7) se conectan a distintos pines digitales del Arduino.</li>
+      <li>El potenciómetro se coloca en la protoboard: sus extremos se conectan a 5V y GND, y su pin central (cursor) se conecta al pin de contraste (VO) de la LCD.</li>
+      <li>La resistencia se conecta entre la alimentación y el pin de retroiluminación de la pantalla, limitando la corriente que la atraviesa.</li>
+      <li>Los pines de alimentación (5V) y tierra (GND) del Arduino se distribuyen por la protoboard mediante cables Dupont, alimentando la LCD y el potenciómetro.</li>
+      <li>El Arduino se conecta al computador mediante un cable USB, que además sirve para alimentarlo y programarlo.</li>
+    </ol>
+
+    <div class="img-slot" style="margin-top:26px;">
+      <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></span>
+      <img src="img/circuito/Circuito.png" alt="Imagen del componente">
+      <small>Espacio adicional para una fotografía del circuito armado físicamente</small>
+    </div>
+
+    <hr class="divider-line" />
+
+    <h2>Cómo Arduino controla la información en pantalla</h2>
+    <p>El Arduino ejecuta un programa que envía, a través de sus pines digitales, las instrucciones y los caracteres que deben aparecer en la pantalla LCD. Mediante la librería de control de la pantalla, el Arduino decide en qué línea y posición se escribe cada dato.</p>
+    <p>El potenciómetro permite ajustar manualmente el contraste hasta que el texto se vea con claridad, mientras que la resistencia mantiene estable la corriente que alimenta la retroiluminación de la pantalla.</p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-mark" aria-hidden="true"><svg viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"><path d="M0 9h8l2-7 3 14 2-11 2 4h9" fill="none" stroke="#e3a857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <p>Proyecto de Bachillerato Técnico · Figura Profesional de Informática · Quito – Ecuador · 2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Componentes — Monitor de frecuencia cardíaca con Arduino</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"><path d="M0 9h8l2-7 3 14 2-11 2 4h9" fill="none" stroke="#ff5d5d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>UEM San Francisco de Quito</span>
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="circuito.html">Circuito</a>
+      <a href="componentes.html">Componentes</a>
+      <a href="desarrollo.html">Desarrollo</a>
+      <a href="conclusiones.html">Conclusiones e importancia</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="index.html#menu">Menú principal</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="section-hero">
+  <div class="hero-ecg-wrap" aria-hidden="true"><svg viewBox="0 0 1600 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 H260 L280 15 L300 85 L320 30 L340 70 L360 50 H800" fill="none" stroke="#ff5d5d" stroke-width="3"/><path d="M0 50 H260 L280 15 L300 85 L320 30 L340 70 L360 50 H800" fill="none" stroke="#ff5d5d" stroke-width="3" transform="translate(800,0)"/></svg></div>
+  <div class="container">
+    <p class="eyebrow-label">Sección 2</p>
+    <h1>Componentes</h1>
+    <p>Estos son los elementos electrónicos utilizados para construir el circuito, tal como aparecen conectados en el diagrama de Tinkercad. Cada tarjeta incluye un espacio para la fotografía real del componente.</p>
+    <div class="chips" style="margin-top:20px;">
+      <span class="chip">Arduino UNO</span>
+      <span class="chip">Pantalla LCD 16x2</span>
+      <span class="chip">Protoboard</span>
+      <span class="chip">Potenciómetro</span>
+      <span class="chip">Resistencia</span>
+      <span class="chip">Cables Dupont</span>
+      <span class="chip">Cable USB</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="componentes-grid">
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 4V2M16 4V2M8 22v-2M16 22v-2M4 8H2M4 16H2M22 8h-2M22 16h-2"/></svg></span>
+          <img src="img/componentes/ArduinoUNO.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Placa de control</span>
+          <h3>Arduino UNO</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Placa de desarrollo con un microcontrolador programable, utilizada para leer sensores y controlar dispositivos electrónicos.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Recibe y procesa la información del circuito, y controla lo que se muestra en la pantalla LCD.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M6.5 9h6M6.5 12.5h9"/><path d="M9 17v2M15 17v2"/></svg></span>
+           <img src="img/componentes/placaLCD.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Salida de datos</span>
+          <h3>Pantalla LCD 16x2</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Pantalla de cristal líquido con 16 columnas y 2 filas, utilizada para mostrar texto e información numérica en tiempo real.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Mostrar en pantalla la información calculada por el Arduino, así como los mensajes del sistema.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="7" width="18" height="10" rx="1"/><path d="M7 7V5M11 7V5M15 7V5M7 19v-2M11 19v-2M15 19v-2"/></svg></span>
+          <img src="img/componentes/Protoboard.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Montaje</span>
+          <h3>Protoboard</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Tablero de conexiones sin soldadura que permite armar circuitos electrónicos de forma temporal y ordenada.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Servir de base para conectar la pantalla LCD, el potenciómetro, la resistencia y los cables del circuito.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="10" r="6"/><path d="M12 10l3.2-3.2"/><path d="M9 20h6M12 16v4"/></svg></span>
+            <img src="img/componentes/Potenciometro.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Ajuste</span>
+          <h3>Potenciómetro</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Resistencia variable que se ajusta manualmente girando una perilla, cambiando así el valor eléctrico que entrega al circuito.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Ajustar el contraste de la pantalla LCD para lograr una correcta visualización de los datos.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12h3l1-3 2 6 2-6 1 3h7"/></svg></span>
+         <img src="img/componentes/Resistencia.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Regulación</span>
+          <h3>Resistencia</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Componente electrónico que limita el paso de corriente eléctrica dentro de un circuito.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Limitar la corriente que llega a la pantalla LCD, protegiendo el circuito de posibles daños.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12h4M8 12v-4M8 8h5M13 8v8M13 16h4M17 16v-4"/></svg></span>
+        <img src="img/componentes/Cables.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Conexión</span>
+          <h3>Cables Dupont</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Cables con conectores macho y hembra utilizados para unir componentes electrónicos sin necesidad de soldadura.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Transmitir la señal y la alimentación eléctrica entre la protoboard y el Arduino.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="componente-card">
+        <div class="img-slot">
+          <span class="slot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="9" width="14" height="6" rx="1"/><path d="M16 11h3v2h-3M21 10v4"/></svg></span>
+           <img src="img/componentes/USB.png" alt="Imagen del componente">
+        </div>
+        <div class="card-body">
+          <span class="tag">Alimentación</span>
+          <h3>Cable USB</h3>
+          <div class="campo">
+            <span class="campo-label">Definición</span>
+            <p>Cable utilizado para conectar el Arduino al computador.</p>
+          </div>
+          <div class="campo">
+            <span class="campo-label">Función</span>
+            <p>Alimentar la placa y transferir el programa desarrollado hacia el Arduino.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-mark" aria-hidden="true"><svg viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"><path d="M0 9h8l2-7 3 14 2-11 2 4h9" fill="none" stroke="#e3a857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <p>Proyecto de Bachillerato Técnico · Figura Profesional de Informática · Quito – Ecuador · 2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
