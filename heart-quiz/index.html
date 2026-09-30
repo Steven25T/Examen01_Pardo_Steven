@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heart Quiz - Proyecto Intermodular Grupo 6</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="caja">
+
+  <svg class="ecg" viewBox="0 0 600 70" preserveAspectRatio="none">
+    <path d="M0 40 H120 L140 40 L155 8 L175 62 L190 40 H300 L320 40 L335 8 L355 62 L370 40 H480 L500 40 L515 8 L535 62 L550 40 H600"/>
+  </svg>
+
+  <!-- MENÚ PRINCIPAL -->
+  <section id="menu">
+    <svg class="latido" viewBox="0 0 24 24"><path fill="#ff2d55" stroke="#ff8fa3" stroke-width=".6" d="M12 21s-8-5.3-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.7-8 11-8 11z"/></svg>
+    <div class="etiqueta">HEART QUIZ</div>
+    <h1>PROYECTO INTERMODULAR GRUPO 6</h1>
+    <p class="bienvenida">Bienvenidos a nuestro juego</p>
+    <p class="txt">Monitor de Frecuencia Cardíaca · Arduino · Tinkercad</p>
+    <div class="jugador">
+      <label for="nombre" class="etiqueta">TU NOMBRE</label>
+      <input id="nombre" type="text" maxlength="20" placeholder="Escribe tu nombre" autocomplete="off">
+      <div class="error" id="errNombre"></div>
+    </div>
+    <button class="btn" onclick="jugar()">▶ JUGAR</button>
+    <button class="btn sec" onclick="verResultados()">📊 VER RESULTADOS</button>
+  </section>
+
+  <!-- REGLAS -->
+  <section id="reglas" class="oculto">
+    <div class="etiqueta">ANTES DE EMPEZAR</div>
+    <h2>📋 Reglas del juego</h2>
+    <ul class="reglas">
+      <li><span class="ic">🎯</span><div>El juego trata sobre el <b>corazón, la frecuencia cardíaca, Arduino y nuestro circuito en Tinkercad</b>.</div></li>
+      <li><span class="ic">❓</span><div>Debes responder <b>10 preguntas</b>. Cada una tiene 4 opciones y solo una es correcta.</div></li>
+      <li><span class="ic">🏆</span><div>Cada respuesta correcta suma <b>10 puntos</b>. El máximo es 100.</div></li>
+      <li><span class="ic">❤️</span><div>Tienes <b>3 vidas</b>. Cada error apaga un corazón. Si pierdes las 3, se acaba el juego.</div></li>
+      <li><span class="ic">🔁</span><div>En cada pregunta puedes pasar a <b>Siguiente</b>, <b>Repetir</b> la pregunta o volver al <b>Menú principal</b>.</div></li>
+    </ul>
+    <button class="btn sec" onclick="ir('menu')">← VOLVER</button>
+    <button class="btn" onclick="comenzar()">¡EMPEZAR!</button>
+  </section>
+
+  <!-- JUEGO -->
+  <section id="juego" class="oculto">
+    <div class="stats">
+      <div class="stat"><small>PUNTOS</small><b id="puntos">0</b></div>
+      <div class="stat"><small>VIDAS</small><b id="vidas"></b></div>
+      <div class="stat"><small>PREGUNTA</small><b id="numero">1/10</b></div>
+    </div>
+    <div class="barra"><div id="progreso"></div></div>
+    <div class="pregunta-box">
+      <div class="cat" id="cat"></div>
+      <h2 id="preg"></h2>
+      <div class="opciones" id="opciones"></div>
+    </div>
+    <div class="msg" id="msg"></div>
+    <div class="acciones">
+      <button class="btn rojo" onclick="menuPrincipal()">🏠 MENÚ PRINCIPAL</button>
+      <button class="btn sec" id="btnRepetir" onclick="repetir()">↻ REPETIR</button>
+      <button class="btn" id="btnSig" onclick="siguiente()">SIGUIENTE ▶</button>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section id="ranking" class="oculto">
+    <div class="etiqueta">JUGADORES</div>
+    <h2>📊 Resultados</h2>
+    <div class="orden">
+      <button class="btn sec chico" id="ordenTurno" onclick="cambiarOrden('turno')">ORDEN DE JUEGO</button>
+      <button class="btn sec chico" id="ordenPuntos" onclick="cambiarOrden('puntos')">MEJOR PUNTAJE</button>
+    </div>
+    <div class="tabla-wrap alta" id="tablaRank"></div>
+    <button class="btn sec" onclick="ir('menu')">← VOLVER</button>
+    <button class="btn rojo" onclick="borrarResultados()">🗑 BORRAR HISTORIAL</button>
+  </section>
+
+  <!-- FIN -->
+  <section id="fin" class="oculto">
+    <div class="final-icon" id="finIcono"></div>
+    <h1 id="finTitulo"></h1>
+    <p class="bienvenida" id="finTexto"></p>
+    <p class="txt" id="finPuesto"></p>
+    <div class="etiqueta">JUGADORES ANTERIORES</div>
+    <div class="tabla-wrap" id="tablaFin"></div>
+    <button class="btn" onclick="comenzar()">↻ REINTENTAR</button>
+    <button class="btn sec" onclick="nuevoJugador()">👤 NUEVO JUGADOR</button>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
